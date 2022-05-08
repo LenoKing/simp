@@ -14,6 +14,14 @@
     </script>
   </head>
   <body>
-    <img src="images/" width="305" height="312" id="myPicture" alt="some image">
+    <script type="text/javascript">
+      var images = [],
+      index = 0;
+      images[0] = "<a href = 'https://github.com/LenoKing/simp/blob/main/images/2.png'><img src='https://github.com/LenoKing/simp/blob/main/images/2.png' alt='2'></a>";
+      images[1] = "<a href = 'https://github.com/LenoKing/simp/blob/main/images/3.png'><img src='https://github.com/LenoKing/simp/blob/main/images/3.png' alt='3'></a>";
+      images[2] = "<a href = 'https://github.com/LenoKing/simp/blob/main/images/4.png'><img src='https://github.com/LenoKing/simp/blob/main/images/4.png' alt='4'></a>";
+      index = Math.floor(Math.random() * images.length);
+      document.write(images[index]);
+      </script>
   </body>
 </html>
