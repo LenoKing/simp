@@ -1,0 +1,15 @@
+{
+    "name": "simps",
+    "version": "1.0.0",
+    "description": "random images",
+    "main": "index.html",
+    "keywords": [
+      "simp",
+      "toga",
+      "anime",
+      "manga",
+      "games"
+    ],
+    "author": "LenoKing",
+    "license": "MIT"
+}
