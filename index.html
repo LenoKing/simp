@@ -9,23 +9,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <script>
-        var imageURLs = [
-       "http://www.myserver.com/images/image1.png"
-     , "http://www.myserver.com/images/image2.png"
-     , "http://www.myserver.com/images/image3.png"
-  ];
-  function getImageTag() {
-    var img = '<img src=\"';
-    var randomIndex = Math.floor(Math.random() * imageURLs.length);
-    img += imageURLs[randomIndex];
-    img += '\" alt=\"Some alt text\"/>';
-    return img;
-  }
+      ga('create', 'UA-61161770-1', 'auto');
+      ga('send', 'pageview');
     </script>
   </head>
   <body>
-    <script type="text/javascript">
-    document.write(getImageTag());
-    
+    <img src="images/" width="305" height="312" id="myPicture" alt="some image">
   </body>
 </html>
