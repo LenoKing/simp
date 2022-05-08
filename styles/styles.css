@@ -24,6 +24,9 @@
     max-height: 100%;
   }
   
-  #images {
-    bottom: 0;
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
