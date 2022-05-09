@@ -27,8 +27,8 @@
   .center {
     display: show;
     margin-left: auto;
-    max-width: 750px;
-    max-height: 500px;
+    max-width: 1000px;
+    max-height: 750px;
   }
 
   * {
