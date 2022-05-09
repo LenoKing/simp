@@ -28,7 +28,7 @@
     display: show;
     margin-left: auto;
     margin-right: auto;
-    bottom: 0;
+    bottom: middle;
     max-width: 750px;
     max-height: 500px;
   }
