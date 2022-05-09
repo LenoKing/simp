@@ -11,25 +11,101 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
   </head>
   <body>
+    <center>
+     <!-- Container for the image gallery -->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <a href="https://simps.cf/toga"><img src="images/toga/10.png" style="width:25%"></a>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <a href="https://simps.cf/gura"><img src="images/gura/6.jpg" style="width:25%"></a>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <a href="https://simps.cf"><img src="images/toga/3.png" style="width:25%"></a>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <a href="https://simps.cf"><img src="images/toga/4.png" style="width:25%"></a>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <a href="https://simps.cf"><img src="images/toga/5.png" style="width:25%"></a>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <a href="https://simps.cf"><img src="images/toga/6.png" style="width:25%"></a>
+    </div>
+</center>
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src='images/toga/10.png' style="width:100%" onclick="currentSlide(1)" alt="Himikot Toga">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/gura/6.jpg" style="width:100%" onclick="currentSlide(2)" alt="Gawr Gura">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/toga/3.png" style="width:100%" onclick="currentSlide(3)" alt="//////">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/toga/4.png" style="width:100%" onclick="currentSlide(4)" alt="//////">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/toga/5.png" style="width:100%" onclick="currentSlide(5)" alt="//////">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/toga/6.png" style="width:100%" onclick="currentSlide(6)" alt="//////">
+      </div>
+    </div>
+  </div> 
     <script type="text/javascript">
-        var images = [],
-        index = 0;
-        images[0] = "<img src='images/toga/1.png' class='center' alt='1'>";
-        images[1] = "<img src='images/toga/2.png' class='center' alt='2'>";
-        images[2] = "<img src='images/toga/3.png' class='center' alt='3'>";
-        images[3] = "<img src='images/toga/4.png' class='center' alt='4'>";
-        images[4] = "<img src='images/toga/5.png' class='center' alt='5'>";
-        images[5] = "<img src='images/toga/6.png' class='center' alt='6'>";
-        images[6] = "<img src='images/toga/7.png' class='center' alt='7'>";
-        images[7] = "<img src='images/toga/8.png' class='center' alt='8'>";
-        images[8] = "<img src='images/toga/9.jpg' class='center' alt='9'>";
-        images[9] = "<img src='images/toga/10.png' class='center' alt='10'>";
-        images[10] = "<img src='images/toga/11.jpg' class='center' alt='11'>";
-        images[11] = "<img src='images/toga/12.jpg' class='center' alt='12'>";
-        images[12] = "<img src='images/toga/13.jpg' class='center' alt='13'>"
-        index = Math.floor(Math.random() * images.length);
-        document.write(images[index]);
-      </script>
-      <a href="https://simps.cf/main">Home</a>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("demo");
+          let captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
   </body>
 </html>
