@@ -42,9 +42,7 @@
   
   /* Hide the images by default */
   .mySlides {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: none;
   }
   
   /* Add a pointer when hovering over the thumbnail images */
