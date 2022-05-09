@@ -37,12 +37,15 @@
   
   /* Position the image container (needed to position the left and right arrows) */
   .container {
-    margin-left: auto;
+    position: relative;
   }
   
   /* Hide the images by default */
   .mySlides {
-    display: none;
+    display: show;
+    margin-left: auto;
+    max-width: 750px;
+    max-height: 500px;
   }
   
   /* Add a pointer when hovering over the thumbnail images */
